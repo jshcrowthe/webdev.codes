@@ -1,8 +1,16 @@
 language: node_js
 node_js: stable
-before_deploy:
-  - npm run build
+install:
+  - npm install
   - pushd functions && npm install && popd
+
+cache:
+  directories:
+    - node_modules
+
+script:
+  - npm run build
+
 deploy:
   provider: firebase
   token:
