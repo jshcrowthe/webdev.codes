@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+#main-header {
+  position: absolute;
+  bottom:0;
+  right:0;
+  padding:10px;
+  border: 2px solid blue;
+}
+
+#main-header h1 {
+  font-size: 24px;
+  margin:0 0 8px;
+  padding:0;
+}
+
+#main-header h2 {
+  font-size: 20px;
+  margin:0;
+  padding:0;
+}
