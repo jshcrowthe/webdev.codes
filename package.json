@@ -1,0 +1,22 @@
+{
+  "name": "webdev.codes",
+  "version": "1.0.0",
+  "description": "A website to help webdevs keep up with the ever changing web dev industry",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jshcrowthe/webdev.codes.git"
+  },
+  "keywords": [
+    "webdev"
+  ],
+  "author": "Josh Crowther <jshcrowthe@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jshcrowthe/webdev.codes/issues"
+  },
+  "homepage": "https://github.com/jshcrowthe/webdev.codes#readme"
+}
