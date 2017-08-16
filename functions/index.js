@@ -85,6 +85,8 @@ exports.githubTrending = functions.https.onRequest((req, res) => {
     });
 });
 
-functions.pubsub.topic("daily-tick").onPublish(event => {
-  refreshGithubTrending();
-});
+exports.githubTrendingCRON = functions.pubsub
+  .topic("daily-tick")
+  .onPublish(event => {
+    refreshGithubTrending();
+  });
