@@ -21,3 +21,21 @@
   margin:0;
   padding:0;
 }
+
+/**
+ * The main content block is the #content section
+ */
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.content-widget {
+  width:100%;
+  display: inline-block;
+  max-width: 350px;
+  max-height: 350px;
+  overflow: scroll;
+  padding: 15px;
+}
