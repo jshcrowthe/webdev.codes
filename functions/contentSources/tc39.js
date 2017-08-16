@@ -31,4 +31,4 @@ function scrapeTC39Github() {
 exports.scrapeTC39Github = scrapeTC39Github;
 
 // For testing purposes
-// scrapeTC39Github();
+// scrapeTC39Github().then(data => console.log(data));
