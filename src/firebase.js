@@ -1,5 +1,5 @@
-import { buildWidget } from './widget';
-import * as firebase from 'firebase/app';
+import { buildWidget } from "./widget";
+import * as firebase from "firebase/app";
 
 export function loadFirebase() {
   firebase.initializeApp({
@@ -13,10 +13,10 @@ export function loadFirebase() {
 }
 
 export function getRefData(ref) {
-  return import('firebase/database')
+  return import("firebase/database")
     .then(() => {
-      if (!ref) throw new Error('`ref` is not defined');
-      return firebase.database().ref(ref).once('value')
+      if (!ref) throw new Error("`ref` is not defined");
+      return firebase.database().ref(ref).once("value");
     })
     .then(snapshot => snapshot.val());
 }
