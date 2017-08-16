@@ -12,10 +12,11 @@ export function loadFirebase() {
   });
 }
 
-export function getTC39Data() {
+export function getRefData(ref) {
   return import('firebase/database')
     .then(() => {
-      return firebase.database().ref('content/tc39/proposals').once('value')
+      if (!ref) throw new Error('`ref` is not defined');
+      return firebase.database().ref(ref).once('value')
     })
     .then(snapshot => snapshot.val());
 }
