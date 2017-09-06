@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>WebDev.Codes</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
-    <header id='main-header' tabindex="-1">
-      <h1>WebDev.Codes</h1>
-      <h2>A place for all webdev things</h2>
-    </header>
-    <h1>Things to add:</h1>
-    <ul>
-      <li>TC39 Proposal Info (active, and maybe Stage-0)</li>
-      <li>Popular Github Repo Info</li>
-      <li>Browser Feature Tracker Info (Links to that data)</li>
-      <li>Trending NPM packages (packages that surge in downloads)</li>
-      <li>Popular NPM packages</li>
-      <li>Javascript Weekly/Daily Posts</li>
-      <li>Popular Twitter handles and tweets from those individuals (can I throw ML at this to ensure that the content stays webdev relevant?)</li>
-    </ul>
-    <!-- Placeholder for content nodes generated via JS -->
-    <section id="content"></section>
-    <script src='js/app.bundle.js'></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WebDev.Codes</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header id='main-header' tabindex="-1">
+    <h1>WebDev.Codes</h1>
+    <h2>A place for all webdev things</h2>
+  </header>
+  <h1>Things to add:</h1>
+  <ul>
+    <li>TC39 Proposal Info (active, and maybe Stage-0)</li>
+    <li>Popular Github Repo Info</li>
+    <li>Browser Feature Tracker Info (Links to that data)</li>
+    <li>Trending NPM packages (packages that surge in downloads)</li>
+    <li>Popular NPM packages</li>
+    <li>Javascript Weekly/Daily Posts</li>
+    <li>Popular Twitter handles and tweets from those individuals (can I throw ML at this to ensure that the content stays webdev relevant?)</li>
+  </ul>
+  <!-- Placeholder for content nodes generated via JS -->
+  <section id="content"></section>
+  <script src='js/app.bundle.js' async></script>
+  <script>
+    // Load SW if applicable
+    if ('serviceWorker' in navigator) {
+      // Register a service worker hosted at the root of the
+      // site using the default scope.
+      navigator.serviceWorker.register('/sw.js').then(function(registration) {
+        console.info(`WebDev.Codes is now cached for offline usage!`);
+      }).catch(function(error) {
+        console.catch('Service worker registration failed:', error);
+      });
+    } else {
+      console.info('Service worker is not supported in your browser, maybe try updating to Chrome: https://www.google.com/chrome/');
+    }
+  </script>
+</body>
 </html>
